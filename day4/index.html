@@ -1,0 +1,37 @@
+ 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notes Toolkit</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>Notes Toolkit</h1>
+      <button id="theme-toggle" type="button">Dark mode</button>
+    </header>
+
+    <main>
+      <label for="note-text">Write your note</label>
+      <textarea
+        id="note-text"
+        rows="8"
+        maxlength="200"
+        placeholder="Start typing your note..."
+      ></textarea>
+
+      <div class="counter">
+        <p id="char-count">0 / 200 characters</p>
+        <p id="word-count">0 words</p>
+      </div>
+
+      <button id="clear-btn" type="button">Clear note</button>
+    </main>
+    <footer>
+      <p>© 2026 QuickNotes. Built during Web Foundations.</p>
+    </footer>
+  </body>
+</html>

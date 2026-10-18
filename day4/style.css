@@ -1,0 +1,129 @@
+/* Light theme: default colors */
+:root {
+  --bg-color: #f4f4f4;
+  --text-color: #333333;
+  --surface-color: #ffffff;
+  --border-color: #cccccc;
+  --button-bg: #333333;
+  --button-text: #ffffff;
+}
+
+/* Dark theme: override the same variables */
+body.dark {
+  --bg-color: #1e1e1e;
+  --text-color: #f1f1f1;
+  --surface-color: #2d2d2d;
+  --border-color: #555555;
+  --button-bg: #e0e0e0;
+  --button-text: #222222;
+}
+
+/* General page styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.5rem;
+  background-color: var(--surface-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+header h1 {
+  margin: 0;
+}
+
+main {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background-color: var(--surface-color);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+textarea {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  font: inherit;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  resize: vertical;
+}
+
+.counter {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.counter p {
+  margin: 0.75rem 0;
+}
+
+/* Character counter warning states */
+.warning {
+  color: #e67e22;
+}
+
+.over {
+  color: #e03131;
+  font-weight: bold;
+}
+
+button {
+  padding: 0.65rem 1rem;
+  color: var(--button-text);
+  background-color: var(--button-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+footer {
+  padding: 1rem;
+  text-align: center;
+  color: var(--text-color);
+}
+
+/* Mobile layout */
+@media (max-width: 600px) {
+  header {
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  main {
+    margin: 1rem;
+    padding: 1rem;
+  }
+}
